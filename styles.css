@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "Sofia Pro Black";
+    src: url("res/sofiaProBlack.otf");
+}
+
+* {
+    font-family: 'Sofia Pro Black';
+}
+
+body {
+    font-family: 'Sofia Pro Black';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FCD13E;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#menu, #game-container, #game-over {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #004d40;
+}
+
+.start-music {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-music:hover {
+    background-color: #004d40;
+}
+
+#game-container {
+    background-color: #e0f7fa;
+    border: 2px solid #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 90vmin; 
+    height: 95vmin;
+    overflow: hidden;
+    position: relative;
+}
+
+#score-container, #time-container {
+    font-size: 24px;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.target {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#game-over {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#restart-button {
+    background-color: #ffffff;
+    color: #f44336;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+    background-color: #ffe0e0;
+}
+
+.floating-text {
+    position: absolute;
+    pointer-events: none;
+    animation: floatText 0.5s ease-out forwards;
+}
+
+@keyframes floatText {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-30px);
+    }
+}

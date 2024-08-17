@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap the Target Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Tap the Target Game</h1>
+        <audio id="background-audio" src="./res/music.mp3" loop></audio>
+        <button class="start-button" data-level="1">Start Game (Beginner)</button>
+        <button class="start-button" data-level="2">Start Game (Level 2)</button>
+        <button class="start-button" data-level="3">Start Game (Level 3)</button>
+        <button class="start-button" data-level="4">Start Game (Level 4)</button>
+        <button class="start-button" data-level="5">Start Game (Level 5)</button>
+        <button class="start-music" id="audio-control">Play Music</button>
+
+    </div>
+    <div id="game-container" class="hidden">
+        <div id="score-container">Score: <span id="score">0</span></div>
+        <div id="time-container">Time: <span id="time">30s</span></div>
+    </div>
+    <div id="game-over" class="hidden">
+        <h1>Game Over</h1>
+        <p>Your final score is: <span id="final-score">0</span></p>
+        <button id="restart-button">Back to Menu</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
